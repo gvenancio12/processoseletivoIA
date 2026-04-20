@@ -1,13 +1,11 @@
 import tensorflow as tf
 import os
 
-# Insira seu código aqui
-
 try:
     # 1. Carregar o modelo treinado da Etapa 1
-    print("Carregando o modelo original...")
+    print("Carregando o modelo original: ")
     if not os.path.exists('model.h5'):
-        raise FileNotFoundError("Arquivo 'model.h5' não encontrado. Execute 'train_model.py' primeiro.")
+        raise FileNotFoundError("Arquivo 'model.h5' não encontrado.")
     
     model = tf.keras.models.load_model('model.h5')
     print("Modelo carregado com sucesso.")
@@ -16,11 +14,11 @@ try:
     converter = tf.lite.TFLiteConverter.from_keras_model(model)
 
     # 3. Aplicar otimização: Dynamic Range Quantization
-    print("Aplicando otimização (Dynamic Range Quantization)...")
+    print("Aplicando otimização: ")
     converter.optimizations = [tf.lite.Optimize.DEFAULT]
 
     # 4. Executar a conversão
-    print("Iniciando conversão...")
+    print("Iniciando conversão: ")
     tflite_model = converter.convert()
     print("Conversão bem-sucedida.")
 
