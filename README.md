@@ -1,7 +1,5 @@
 ## 📝 Relatório do Candidato
 
-Este documento serve como o relatório final do desafio técnico, detalhando o processo de desenvolvimento, as escolhas feitas e os resultados alcançados.
-
 👤 Identificação: **Nome Completo: Guilherme Venâncio de Souza**
 
 
